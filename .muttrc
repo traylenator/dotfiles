@@ -1,0 +1,52 @@
+# muttrc file
+#
+set from     = "steve.traylen@cern.ch"
+set realname = "Steve Traylen"
+set my_name  = "Steve Traylen"
+set editor   = "vim +/^$ ++1 -c 'set filetype=mail textwidth=0 noautoindent'"
+
+set edit_headers = yes
+set fast_reply   = yes
+
+auto_view         text/html
+alternative_order text/plain text/enriched text/html
+
+
+# IMAP
+set imap_user = straylen
+set folder    = imaps://straylen@cernmail-pilot.cern.ch:993/
+set spoolfile = +INBOX
+
+mailboxes     = +INBOX
+
+# SMTP
+set ssl_starttls = yes
+set smtp_url=smtp://straylen@cernsmtp.cern.ch:587
+set ssl_force_tls = yes
+
+# caches
+set header_cache = ~/.cache/mutt
+set message_cachedir = ~/.cache/mutt
+
+set postponed = +Drafts
+set record = "+Sent Items"
+
+unset imap_passive
+set imap_keepalive = 300
+set mail_check     = 120
+
+#Macros
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+# Set up preview pane for messages
+set pager_index_lines 	= 10 	# number of index lines to show
+set pager_context 		= 3     # number of context lines to show
+set pager_stop          = yes   # don't go to next message automatically
+set menu_scroll         = yes   # scroll in menus
+set tilde               = yes   # show tildes like in vim
+set markers             = no 	# no ugly plus signs
+
+
+
+
