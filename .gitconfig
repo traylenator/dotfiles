@@ -3,3 +3,7 @@
 	email = steve.traylen@cern.ch
 [push]
 	default = simple
+
+[http]
+	emptyAuth = true
+
