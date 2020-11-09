@@ -8,7 +8,7 @@ set ts=2
 set showmatch
 let python_highlight_all = 1
 
-"Markdown .md is not Modula-2
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['html', 'python', 'puppet','ruby', 'bash=sh']
+set spell spelllang=en_gb
 
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
