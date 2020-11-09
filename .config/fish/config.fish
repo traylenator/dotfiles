@@ -7,5 +7,12 @@ set -gx PUPPET_VERSION "~> 6.0"
 os_env me
 
 set -g fish_greeting
+
 # Start ssh-agent
 fish_ssh_agent
+
+# Add puppet-agent bin path.
+if test -d /opt/puppetlabs/bin
+  set PATH $PATH /opt/puppetlabs/bin
+end
+
