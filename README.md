@@ -21,6 +21,8 @@ Start a fresh shell so the configuration alias is live
 Start weechat and identify
 * switch to freenode buffer and `/msg NickServ IDENTIFY ********`
 
+Start vim and run:
+* PluginInstall
 
 ## Inspiration
 Method used is [atlassian one](https://www.atlassian.com/git/tutorials/dotfiles)
