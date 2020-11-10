@@ -1,3 +1,6 @@
+syntax on
+filetype plugin indent on
+
 set number
 set expandtab
 set shiftwidth=2
@@ -8,7 +11,27 @@ set ts=2
 set showmatch
 let python_highlight_all = 1
 
-"Markdown .md is not Modula-2
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['html', 'python', 'puppet','ruby', 'bash=sh']
+set spell spelllang=en_gb
+
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+autocmd FileType markdown setlocal complete+=kspell
+autocmd FileType gitcommit setlocal complete+=kspell
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'editorconfig/editorconfig-vim' " 
+Plug 'elzr/vim-json' "
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
+Plug 'junegunn/fzf.vim' " 
+Plug 'mrk21/yaml-vim' " 
+" Needs vim 8.1  Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
+Plug 'rodjek/vim-puppet' " For Puppet syntax highlighting
+Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
+
+call plug#end()
+
+command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0) " FZF settings
+noremap <Leader>/ :FZF<CR> " Set FZF to <LEADER>/, which for me is `,/`
+
 

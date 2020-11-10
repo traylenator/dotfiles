@@ -5,6 +5,7 @@ Dotfiles maintained for:
 * mutt
 * tmux
 * vim
+* weechat
 
 ## Bootstrap
 To start syncing dotfiles to a new system
@@ -15,8 +16,14 @@ git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout
 git --git-dir=$HOME/.cfg/ --work-tree=$HOME config --local status.showUntrackedFiles no
 ```
 
-and start a fresh shell so the configuration alias is live 
+Start a fresh shell so the configuration alias is live 
+
+Start weechat and identify
+* switch to freenode buffer and `/msg NickServ IDENTIFY ********`
+
+Start vim and run:
+* PluginInstall
 
 ## Inspiration
-Method used is https://www.atlassian.com/git/tutorials/dotfiles
+Method used is [atlassian one](https://www.atlassian.com/git/tutorials/dotfiles)
 

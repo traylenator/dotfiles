@@ -1,0 +1,1 @@
+/home/straylen/.fzf/shell/key-bindings.fish
