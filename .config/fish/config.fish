@@ -16,3 +16,7 @@ if test -d /opt/puppetlabs/bin
   set PATH $PATH /opt/puppetlabs/bin
 end
 
+if test -f /etc/profile.d/mco.sh
+  bass "source /etc/profile.d/mco.sh"
+end
+
