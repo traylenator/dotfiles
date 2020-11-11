@@ -11,7 +11,7 @@ set ts=2
 set showmatch
 let python_highlight_all = 1
 
-set spell spelllang=en_gb
+set spelllang=en_gb
 
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell

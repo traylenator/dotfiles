@@ -6,6 +6,7 @@ Dotfiles maintained for:
 * tmux
 * vim
 * weechat
+* systemd user tmpfiles.d entries
 
 ## Bootstrap
 To start syncing dotfiles to a new system
@@ -23,6 +24,15 @@ Start weechat and identify
 
 Start vim and run:
 * PluginInstall
+
+Create some directories and maintain them
+* systemctl enable --user systemd-tmpfiles-setup.service
+* systemctl start  --user systemd-tmpfiles-setup.service
+* systemctl enable --user systemd-tmpfiles-clean.timer
+* systemctl start  --user systemd-tmpfiles-clean.timer
+
+
+
 
 ## Inspiration
 Method used is [atlassian one](https://www.atlassian.com/git/tutorials/dotfiles)
