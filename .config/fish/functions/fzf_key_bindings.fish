@@ -1,1 +1,1 @@
-/home/straylen/.fzf/shell/key-bindings.fish
+/afs/cern.ch/user/s/straylen/.fzf/shell/key-bindings.fish
