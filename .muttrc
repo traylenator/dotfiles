@@ -8,6 +8,8 @@ set editor   = "vim +/^$ ++1 -c 'set filetype=mail textwidth=0 noautoindent'"
 set edit_headers = yes
 set fast_reply   = yes
 
+set mailcap_path = "~/.mutt/mailcap"
+
 auto_view         text/html
 alternative_order text/plain text/enriched text/html
 
@@ -51,4 +53,6 @@ set markers             = no 	# no ugly plus signs
 set query_command= "abook --mutt-query '%s'"
 macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
 bind editor        <Tab> complete-query
+
+
 
