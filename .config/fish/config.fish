@@ -2,6 +2,7 @@
 # bundle on AI.
 set -gx BUNDLE_GEMFILE "../ci/Gemfile"
 set -gx PUPPET_VERSION "~> 6.0"
+set -gx EDITOR vim
 
 # Openstack
 os_env me
