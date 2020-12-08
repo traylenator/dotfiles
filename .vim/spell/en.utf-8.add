@@ -19,3 +19,7 @@ keytabs
 cern
 ch
 CentOS
+nftables
+nft
+systemd
+ruleset
