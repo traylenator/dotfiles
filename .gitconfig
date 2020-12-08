@@ -1,10 +1,13 @@
 [user]
 	name = Steve Traylen
 	email = steve.traylen@cern.ch
-	signingkey = 3AA5C34371567BD2
+	signingkey = 2B738F5F2348427F
 [push]
 	default = simple
 
 [http]
 	emptyAuth = true
+
+[gpg]
+	program = gpg
 
