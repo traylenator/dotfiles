@@ -28,6 +28,9 @@ Plug 'mrk21/yaml-vim' "
 " Needs vim 8.1  Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
 Plug 'rodjek/vim-puppet' " For Puppet syntax highlighting
 Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
+" match % it end type things
+runtime macros/matchit.vim
+
 
 call plug#end()
 
