@@ -11,3 +11,5 @@
 [gpg]
 	program = gpg
 
+[pull]
+	rebase = false
