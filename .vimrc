@@ -19,7 +19,7 @@ autocmd FileType markdown setlocal complete+=kspell
 autocmd FileType gitcommit setlocal complete+=kspell
 
 call plug#begin('~/.vim/plugged')
-
+Plug 'nfnty/vim-nftables'
 Plug 'editorconfig/editorconfig-vim' " 
 Plug 'elzr/vim-json' "
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
