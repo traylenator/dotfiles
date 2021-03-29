@@ -26,3 +26,6 @@ if test -f /etc/profile.d/mco.sh
   bass "source /etc/profile.d/mco.sh"
 end
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/steve/google-cloud-sdk/path.fish.inc' ]; . '/home/steve/google-cloud-sdk/path.fish.inc'; end
