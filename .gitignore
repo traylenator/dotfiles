@@ -1,2 +1,4 @@
 .cfg
 .config/fish/fish_variables
+.ssh/id_rsa
+.ssh/id_rsa_fedora
