@@ -22,15 +22,17 @@ set strict_threads="yes"
 
 # IMAP
 set imap_user = straylen
-set folder    = imaps://straylen@cernmail-pilot.cern.ch:993/
+set folder    = imaps://straylen@cernmail.cern.ch:993/
+set imap_authenticators="gssapi"
 set spoolfile = +INBOX
 
 mailboxes     = +INBOX
 
 # SMTP
 set ssl_starttls = yes
-set smtp_url=smtp://straylen@cernsmtp.cern.ch:587
+set smtp_url=smtp://straylen@cernmail.cern.ch:587
 set ssl_force_tls = yes
+set smtp_authenticators = "gssapi:login"
 
 # caches
 set header_cache = ~/.cache/mutt
