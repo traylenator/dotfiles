@@ -22,6 +22,7 @@ set strict_threads="yes"
 
 # IMAP
 set imap_user = straylen
+set imap_keepalive 600
 set folder    = imaps://straylen@cernmail.cern.ch:993/
 set imap_authenticators="gssapi"
 set spoolfile = +INBOX
