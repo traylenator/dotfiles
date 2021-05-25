@@ -1,3 +1,5 @@
 .cfg
 .config/fish/fish_variables
 .weechat/irc.conf
+.ssh/id_rsa
+.ssh/id_rsa_fedora
