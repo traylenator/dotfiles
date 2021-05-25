@@ -19,6 +19,8 @@ autocmd FileType markdown setlocal complete+=kspell
 autocmd FileType gitcommit setlocal complete+=kspell
 
 call plug#begin('~/.vim/plugged')
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 Plug 'nfnty/vim-nftables'
 Plug 'editorconfig/editorconfig-vim' " 
 Plug 'elzr/vim-json' "
