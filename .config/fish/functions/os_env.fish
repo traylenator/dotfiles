@@ -17,7 +17,9 @@ function os_env
       set -gx OS_PROJECT_NAME "IT LxPlus Metal"
     case 'config'
       set -gx OS_PROJECT_NAME "IT Configuration Management Services"
+    case 'configcrit'
+      set -gx OS_PROJECT_NAME "IT Configuration Management Services - critical area"
     case '*'
-      echo 'plus , metal, me or  ..'
+      echo 'plus , metal, me, config or configcrit '
   end
 end
