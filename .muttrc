@@ -5,8 +5,8 @@ set realname = "Steve Traylen"
 set my_name  = "Steve Traylen"
 set editor   = "vim +/^$ ++1 -c 'set filetype=mail textwidth=0 noautoindent'"
 
-# 
 set mbox_type=Maildir
+
 
 
 set edit_headers = yes
@@ -28,6 +28,10 @@ set imap_authenticators="gssapi"
 set spoolfile = +INBOX
 
 mailboxes     = +INBOX
+
+set trash = "=Bin"
+#folder-hook . 'macro index d "<save-message>=Bin<enter>"'
+#folder-hook =Bin 'macro index d <delete-message>'
 
 # SMTP
 set ssl_starttls = yes
