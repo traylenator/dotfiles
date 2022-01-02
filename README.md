@@ -26,12 +26,8 @@ Start vim and run:
 * PluginInstall
 
 Create some directories and maintain them
-* systemctl enable --user systemd-tmpfiles-setup.service
-* systemctl start  --user systemd-tmpfiles-setup.service
-* systemctl enable --user systemd-tmpfiles-clean.timer
-* systemctl start  --user systemd-tmpfiles-clean.timer
-
-
+* systemctl enable --user --now systemd-tmpfiles-setup.service
+* systemctl enable --user --now systemd-tmpfiles-clean.timer
 
 
 ## Inspiration
