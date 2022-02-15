@@ -1,8 +1,11 @@
 
 # bundle on AI.
 set -gx BUNDLE_GEMFILE "../ci/Gemfile"
-set -gx PUPPET_VERSION "~> 6.0"
+set -gx PUPPET_VERSION '~> 7.0'
+set -gx FACTER_GEM_VERSION '~> 4.0'
 set -gx EDITOR vim
+
+set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR"/ssh-agent.socket
 
 # Openstack
 os_env me
