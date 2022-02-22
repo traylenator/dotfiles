@@ -13,7 +13,7 @@ os_env me
 set -g fish_greeting
 
 # Start ssh-agent
-fish_ssh_agent
+#fish_ssh_agent
 
 # Add puppet-agent bin path.
 if test -d /opt/puppetlabs/bin
