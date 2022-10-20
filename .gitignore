@@ -3,3 +3,4 @@
 .weechat/irc.conf
 .ssh/id_rsa
 .ssh/id_rsa_fedora
+.mbsync.oauth2token

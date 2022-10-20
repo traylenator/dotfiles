@@ -3,10 +3,29 @@
 set from     = "steve.traylen@cern.ch"
 set realname = "Steve Traylen"
 set my_name  = "Steve Traylen"
+set use_from = "yes"
+set envelope_from = "yes"
+
 set editor   = "vim +/^$ ++1 -c 'set filetype=mail textwidth=0 noautoindent'"
 
+# Inbox
 set mbox_type=Maildir
+set folder=~/Maildir
+set spoolfile=+INBOX
+set record=+Sent
+set postponed=+Drafts
+set trash=+Bin
 
+# Sync
+macro index S "<shell-escape>mbsync -V work<enter>" "sync email"
+
+folder-hook . 'macro index d "<save-message>=Bin<enter>"'
+folder-hook =+Bin 'macro index d <delete-message>'
+set confirmappend=no
+
+
+# smtp
+set sendmail = "/usr/bin/msmtp"
 
 
 set edit_headers = yes
@@ -20,35 +39,14 @@ alternative_order text/plain text/enriched text/html
 set sort="threads"
 set strict_threads="yes"
 
-# IMAP
-set imap_user = straylen
-set imap_keepalive = 600
-set folder    = imaps://straylen@cernmail.cern.ch:993/
-set imap_authenticators="gssapi"
-set spoolfile = +INBOX
-
 mailboxes     = +INBOX
 
-set trash = "=Bin"
-folder-hook . 'macro index d "<save-message>=Bin<enter>"'
-folder-hook =Bin 'macro index d <delete-message>'
-set confirmappend=no
-
-# SMTP
-set ssl_starttls = yes
-set smtp_url=smtp://straylen@cernmail.cern.ch:587
-set ssl_force_tls = yes
-set smtp_authenticators = "gssapi:login"
 
 # caches
 set header_cache = ~/.cache/mutt
 set message_cachedir = ~/.cache/mutt
 
-set postponed = +Drafts
-set record = "+Sent Items"
 
-unset imap_passive
-set imap_keepalive = 300
 set mail_check     = 120
 
 #Macros

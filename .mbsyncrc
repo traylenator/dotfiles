@@ -1,0 +1,25 @@
+MaildirStore local
+Path  ~/Maildir/
+Inbox ~/Maildir/INBOX
+SubFolders Verbatim
+
+imapaccount steve
+Host outlook.office365.com
+AuthMechs XOAUTH2
+Port 993
+User steve.traylen@cern.ch
+PassCmd "~/.mutt/mutt_oauth2.py ~/.mbsync.oauth2token"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore microsoft
+Account steve
+
+Channel work
+Far :microsoft:
+Near :local:
+Create Near
+Sync All
+Expunge Both
+SyncState *
+
