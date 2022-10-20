@@ -30,8 +30,9 @@ set spoolfile = +INBOX
 mailboxes     = +INBOX
 
 set trash = "=Bin"
-#folder-hook . 'macro index d "<save-message>=Bin<enter>"'
-#folder-hook =Bin 'macro index d <delete-message>'
+folder-hook . 'macro index d "<save-message>=Bin<enter>"'
+folder-hook =Bin 'macro index d <delete-message>'
+set confirmappend=no
 
 # SMTP
 set ssl_starttls = yes
