@@ -30,6 +30,11 @@ Create some directories and maintain them
 * systemctl enable --user --now systemd-tmpfiles-clean.timer
 
 
+# Email
+* Install isync, cyrus-sasl-deve
+* `mutt_oauth2.py -a --authflow localhostauthcode ~/.mbsync.oauth2token`
+* `git clone https://github.com/moriyoshi/cyrus-sasl-xoauth2.git ; autogen.sh ; ./configure ; make ; make install`
+
 ## Inspiration
 Method used is [atlassian one](https://www.atlassian.com/git/tutorials/dotfiles)
 
