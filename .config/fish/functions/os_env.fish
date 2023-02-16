@@ -22,9 +22,12 @@ function os_env
       set -gx OS_PROJECT_NAME "IT LxPlus Metal"
     case 'gpu'
       set -gx OS_PROJECT_NAME "IT LxPlus GPU"
-    case 'arm'
+    case 'armnext'
       set -gx OS_PROJECT_NAME "IT LxPlus ARM"
       set -gx OS_REGION_NAME "next"
+    case 'arm'
+      set -gx OS_PROJECT_NAME "IT LxPlus ARM"
+      set -gx OS_REGION_NAME "cern"
     case 'config'
       set -gx OS_PROJECT_NAME "IT Configuration Management Services"
     case 'configcrit'
