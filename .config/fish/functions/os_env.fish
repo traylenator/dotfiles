@@ -15,6 +15,10 @@ function os_env
     case 'plus'
       set -gx OS_PROJECT_NAME "IT LxPlus"
       set -gx OS_REGION_NAME "cern"
+    case 'etc'
+      set -gx OS_PROJECT_NAME "ETF"
+      set -gx OS_REGION_NAME "cern"
+
     case 'pluscrit'
       set -gx OS_PROJECT_NAME "IT LxPlus Critical"
       set -gx OS_REGION_NAME "cern"
