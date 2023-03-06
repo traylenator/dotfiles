@@ -33,7 +33,6 @@ Kubernetes
 Traylen
 Guijarro
 earlyoom
-
 epel
 certmgr
 systemctl
@@ -48,3 +47,5 @@ sudo
 kickstarted
 EL8
 kickstart
+PuppetDB
+hostgroup
