@@ -43,3 +43,8 @@ osrepos
 hiera
 EOS
 JSON
+authselect
+sudo
+kickstarted
+EL8
+kickstart
