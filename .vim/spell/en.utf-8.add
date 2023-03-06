@@ -33,7 +33,6 @@ Kubernetes
 Traylen
 Guijarro
 earlyoom
-
 epel
 certmgr
 systemctl
@@ -43,3 +42,5 @@ osrepos
 hiera
 EOS
 JSON
+PuppetDB
+hostgroup
