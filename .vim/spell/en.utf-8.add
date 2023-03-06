@@ -37,3 +37,9 @@ earlyoom
 epel
 certmgr
 systemctl
+mco
+hostgroup
+osrepos
+hiera
+EOS
+JSON

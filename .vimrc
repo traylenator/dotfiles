@@ -1,6 +1,7 @@
 syntax on
 filetype plugin indent on
 
+set background=dark
 set number
 set expandtab
 set shiftwidth=2
