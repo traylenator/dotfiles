@@ -49,3 +49,4 @@ EL8
 kickstart
 PuppetDB
 hostgroup
+packetbeat
