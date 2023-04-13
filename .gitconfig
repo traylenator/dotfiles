@@ -7,6 +7,7 @@
 
 [http]
 	emptyAuth = true
+	postBuffer = 2097152000
 
 [gpg]
 	program = gpg
@@ -15,3 +16,5 @@
 	rebase = false
 [credential]
 	helper = cache
+[https]
+	postBuffer = 20971520000
