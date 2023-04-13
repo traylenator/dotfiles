@@ -50,3 +50,5 @@ kickstart
 PuppetDB
 hostgroup
 packetbeat
+Editorconfig
+editorconfig
