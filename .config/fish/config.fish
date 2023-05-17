@@ -32,3 +32,6 @@ end
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/steve/google-cloud-sdk/path.fish.inc' ]; . '/home/steve/google-cloud-sdk/path.fish.inc'; end
+
+status --is-interactive; and rbenv init - fish | source
+
