@@ -29,9 +29,14 @@ if test -f /etc/profile.d/mco.sh
   bass "source /etc/profile.d/mco.sh"
 end
 
+if test -f /usr/share/doc/find-the-command/ftc.fish
+  source /usr/share/doc/find-the-command/ftc.fish
+end
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/steve/google-cloud-sdk/path.fish.inc' ]; . '/home/steve/google-cloud-sdk/path.fish.inc'; end
+if test -f /usr/bin/rbenv
+  status --is-interactive; and rbenv init - fish | source
+end
 
-status --is-interactive; and rbenv init - fish | source
+
+
 
