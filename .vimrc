@@ -42,4 +42,7 @@ let g:vim_markdown_folding_disabled = 1
 command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0) " FZF settings
 noremap <Leader>/ :FZF<CR> " Set FZF to <LEADER>/, which for me is `,/`
 
+" Reopen the last edited position in files
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 
