@@ -42,6 +42,10 @@ if test -f /usr/bin/rbenv
   status --is-interactive; and rbenv init - fish | source
 end
 
+# uses dircolors template
+eval (dircolors -c ~/.dircolors/dircolors.256dark)
 
+# Aliases
+alias ls='ls --color=auto'
 
 
