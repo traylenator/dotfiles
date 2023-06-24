@@ -24,6 +24,11 @@ end
 if test -d /usr/sue/bin
   set PATH /usr/sue/bin $PATH
 end
+#
+if test -d {$HOME}/bin
+  set PATH {$HOME}/bin $PATH
+end
+
 
 if test -f /etc/profile.d/mco.sh
   bass "source /etc/profile.d/mco.sh"
