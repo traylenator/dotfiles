@@ -1,5 +1,6 @@
 .cfg
 .config/fish/fish_variables
+.config/fish/functions/fzf_key_bindings.fish
 .weechat/irc.conf
 .ssh/id_rsa
 .ssh/id_rsa_fedora

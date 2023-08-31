@@ -12,6 +12,9 @@ function os_env
     case 'me'
       set -gx OS_PROJECT_NAME "Personal straylen"
       set -gx OS_REGION_NAME "cern"
+    case 'acron'
+      set -gx OS_PROJECT_NAME "IT ACRON"
+      set -gx OS_REGION_NAME "cern"
     case 'hammer'
       set -gx OS_PROJECT_NAME "IT HammerCloud"
       set -gx OS_REGION_NAME "cern"
