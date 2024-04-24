@@ -14,7 +14,7 @@
 
 [pull]
 	rebase = false
-[credential]
-	helper = cache
 [https]
 	postBuffer = 20971520000
+[credential]
+	helper = store --file ~/.my-credentials
