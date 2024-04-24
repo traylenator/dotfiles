@@ -56,3 +56,6 @@ versionlock
 versionlock
 systemd
 UIDs
+Kaniko
+AlmaLinux
+yumrepo
