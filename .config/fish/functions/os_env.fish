@@ -9,35 +9,28 @@ function os_env
   set -gx OS_REGION_NAME cern
 
   switch $argv
+    case 'cern'
+      set -gx OS_REGION_NAME pdc
+    case 'pdc'
+      set -gx OS_REGION_NAME pdc
     case 'me'
       set -gx OS_PROJECT_NAME "Personal straylen"
-      set -gx OS_REGION_NAME "cern"
     case 'acron'
       set -gx OS_PROJECT_NAME "IT ACRON"
-      set -gx OS_REGION_NAME "cern"
     case 'hammer'
       set -gx OS_PROJECT_NAME "IT HammerCloud"
-      set -gx OS_REGION_NAME "cern"
     case 'plus'
       set -gx OS_PROJECT_NAME "IT LxPlus"
-      set -gx OS_REGION_NAME "cern"
     case 'etf'
       set -gx OS_PROJECT_NAME "IT ETF"
-      set -gx OS_REGION_NAME "cern"
-
     case 'pluscrit'
       set -gx OS_PROJECT_NAME "IT LxPlus Critical"
-      set -gx OS_REGION_NAME "cern"
     case 'metal'
       set -gx OS_PROJECT_NAME "IT LxPlus Metal"
     case 'gpu'
       set -gx OS_PROJECT_NAME "IT LxPlus GPU"
-    case 'armnext'
-      set -gx OS_PROJECT_NAME "IT LxPlus ARM"
-      set -gx OS_REGION_NAME "next"
     case 'arm'
       set -gx OS_PROJECT_NAME "IT LxPlus ARM"
-      set -gx OS_REGION_NAME "cern"
     case 'config'
       set -gx OS_PROJECT_NAME "IT Configuration Management Services"
     case 'configcrit'
