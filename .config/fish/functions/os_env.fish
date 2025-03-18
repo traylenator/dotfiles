@@ -8,6 +8,9 @@ function os_env
   set -gx OS_PROTOCOL kerberos
 
   switch $argv
+    case 'linuxvms'
+      set -gx OS_REGION_NAME cern
+      set -gx OS_PROJECT_NAME "IT Linux Support - Test VMs"
     case 'nag'
       set -gx OS_REGION_NAME cern
       set -gx OS_PROJECT_NAME "cernnag"
@@ -41,6 +44,6 @@ function os_env
     case 'configcrit'
       set -gx OS_PROJECT_NAME "IT Configuration Management Services - critical area"
     case '*'
-      echo 'plus , pluscrit, arm, metal, me, config or configcrit '
+      echo 'linuxvms, me'
   end
 end
