@@ -11,6 +11,12 @@ function os_env
     case 'linuxvms'
       set -gx OS_REGION_NAME cern
       set -gx OS_PROJECT_NAME "IT Linux Support - Test VMs"
+    case 'aims'
+      set -gx OS_REGION_NAME cern
+      set -gx OS_PROJECT_NAME "AIMS service"
+    case 'aimscrit'
+      set -gx OS_REGION_NAME cern
+      set -gx OS_PROJECT_NAME "AIMS service - Critical"
     case 'nag'
       set -gx OS_REGION_NAME cern
       set -gx OS_PROJECT_NAME "cernnag"
