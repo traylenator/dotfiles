@@ -6,11 +6,22 @@ function os_env
   set -gx OS_MUTUAL_AUTH disabled
   set -gx OS_PROJECT_DOMAIN_ID default
   set -gx OS_PROTOCOL kerberos
-  set -gx OS_REGION_NAME cern
 
   switch $argv
+    case 'linuxvms'
+      set -gx OS_REGION_NAME cern
+      set -gx OS_PROJECT_NAME "IT Linux Support - Test VMs"
+    case 'aims'
+      set -gx OS_REGION_NAME cern
+      set -gx OS_PROJECT_NAME "AIMS service"
+    case 'aimscrit'
+      set -gx OS_REGION_NAME cern
+      set -gx OS_PROJECT_NAME "AIMS service - Critical"
+    case 'nag'
+      set -gx OS_REGION_NAME cern
+      set -gx OS_PROJECT_NAME "cernnag"
     case 'cern'
-      set -gx OS_REGION_NAME pdc
+      set -gx OS_REGION_NAME cern
     case 'pdc'
       set -gx OS_REGION_NAME pdc
     case 'me'
@@ -33,9 +44,12 @@ function os_env
       set -gx OS_PROJECT_NAME "IT LxPlus ARM"
     case 'config'
       set -gx OS_PROJECT_NAME "IT Configuration Management Services"
+    case 'configpdc'
+      set -gx OS_PROJECT_NAME "IT Configuration Management Services - PDC"
+      set -gx OS_REGION_NAME pdc
     case 'configcrit'
       set -gx OS_PROJECT_NAME "IT Configuration Management Services - critical area"
     case '*'
-      echo 'plus , pluscrit, arm, metal, me, config or configcrit '
+      echo 'linuxvms, me'
   end
 end
