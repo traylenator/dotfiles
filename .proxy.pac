@@ -7,6 +7,7 @@ function FindProxyForURL(url, host) {
         "its.cern.ch",
         "gitlab.cern.ch",
         "mattermost.web.cern.ch",
+        "mm-auth.web.cern.ch",
     ];
 
     if (directHosts.includes(host)) {
