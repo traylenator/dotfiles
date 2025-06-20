@@ -8,6 +8,15 @@ function os_env
   set -gx OS_PROTOCOL kerberos
 
   switch $argv
+    case 'koji'
+      set -gx OS_REGION_NAME cern
+      set -gx OS_PROJECT_NAME "Linux Software Building"
+    case 'linuxcivms'
+      set -gx OS_REGION_NAME cern
+      set -gx OS_PROJECT_NAME "IT Linux Support - CI VMs"
+    case 'linuxciphy'
+      set -gx OS_REGION_NAME cern
+      set -gx OS_PROJECT_NAME "IT Linux Support - CI Physical"
     case 'linuxvms'
       set -gx OS_REGION_NAME cern
       set -gx OS_PROJECT_NAME "IT Linux Support - Test VMs"
@@ -50,6 +59,6 @@ function os_env
     case 'configcrit'
       set -gx OS_PROJECT_NAME "IT Configuration Management Services - critical area"
     case '*'
-      echo 'linuxvms, me'
+      echo 'linuxvms, me, linuxcivms, linuxciphy, koji'
   end
 end
